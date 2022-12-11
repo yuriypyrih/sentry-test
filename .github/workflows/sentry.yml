@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test and Build
-        run: |
-          npm i
-          npm run build
+#      - name: Test and Build
+#        run: |
+#          npm i
+#          npm run build
       - name: Sentry release
         uses: getsentry/action-release@v1.2.1
         env:
