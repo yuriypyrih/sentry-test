@@ -23,5 +23,7 @@ jobs:
           SENTRY_AUTH_TOKEN: 2b0d35b0a8634ebf9678003eaf9e8c8c7a477a5a96864240a14df4bee0624154
           SENTRY_PROJECT: yuriy-yest
         with:
+          environment: 'deva'
+          version: 'v1.0.1'
           url_prefix: '~/static/js'
           sourcemaps: './build/static/js/'
