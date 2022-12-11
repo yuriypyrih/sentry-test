@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>SENTRY TEST</div>
+        <div>SENTRY TEST ok</div>
         <button onClick={onClick}>SENTRY BUG</button>
       </header>
     </div>
