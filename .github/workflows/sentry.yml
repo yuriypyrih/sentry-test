@@ -1,0 +1,27 @@
+
+
+name: Pushing sourcemaps to sentry
+
+on:
+  push:
+      branches: [ master ]
+
+  jobs:
+    steps:
+      - name: Test and Build
+        run: |
+          npm ci
+          npm run test:all
+          npm run build --if-present
+
+      - name: Sentry release
+        uses: getsentry/action-release@v1.2.1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        with:
+          environment: deva
+          url_prefix: '~/static/js'
+          sourcemaps: './build/static/js/'
+

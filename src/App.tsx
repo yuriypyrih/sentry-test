@@ -3,21 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const onClick = () => {
+    // @ts-ignore
+    console.log("BOSS THIS IS CLICKED", plop)
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>SENTRY TEST</div>
+        <button onClick={onClick}>SENTRY BUG</button>
       </header>
     </div>
   );
