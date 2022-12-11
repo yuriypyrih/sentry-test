@@ -19,7 +19,7 @@ jobs:
       - name: Sentry release
         uses: getsentry/action-release@v1.2.1
         env:
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_ORG: yuriyp
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         with:
