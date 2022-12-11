@@ -9,6 +9,7 @@ on:
 jobs:
   deploy-deva:
     name: Deploy Deva
+    runs-on: ubuntu-latest
 
     steps:
       - name: Test and Build
