@@ -15,8 +15,7 @@ jobs:
       - name: Test and Build
         run: |
           npm i
-          npm run test
-          npm run build --if-present
+          npm run build
       - name: Sentry release
         uses: getsentry/action-release@v1.2.1
         env:
