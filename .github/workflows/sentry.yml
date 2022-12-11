@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Test and Build
         run: |
-          npm ci
-          npm run test:all
+          npm i
+          npm run test
           npm run build --if-present
       - name: Sentry release
         uses: getsentry/action-release@v1.2.1
